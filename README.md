@@ -1,5 +1,4 @@
 # WorkoutPlanner
-Workout planner made for ISS lab
 
 
 Workout Planner
