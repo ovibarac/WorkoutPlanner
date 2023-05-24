@@ -499,7 +499,7 @@
 									"font": "Arial;13;0",
 									"left": 542,
 									"top": 143,
-									"width": 106.12890625,
+									"width": 106,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGHI9zXYzOEggM="
@@ -801,7 +801,7 @@
 									"font": "Arial;13;0",
 									"left": 543,
 									"top": 231,
-									"width": 109.7216796875,
+									"width": 109,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGHI92t/TPDAvs="
@@ -2321,7 +2321,7 @@
 									"font": "Arial;13;0",
 									"left": 539.5,
 									"top": 539.5,
-									"width": 131.3291015625,
+									"width": 130,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGHI+AfjTUHQro="
@@ -2806,7 +2806,7 @@
 									"font": "Arial;13;0",
 									"left": 512,
 									"top": 607,
-									"width": 192.76806640625,
+									"width": 192,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGHI+qdLTWHsoQ="
@@ -7705,9 +7705,9 @@
 										"$ref": "AAAAAAGHJtfXf20ZgfQ="
 									},
 									"font": "Arial;13;0",
-									"left": 408.72998046875,
+									"left": 407.27001953125,
 									"top": 61,
-									"width": 110.82080078125,
+									"width": 98.46826171875,
 									"height": 13,
 									"text": "UseCaseDiagram1"
 								},
@@ -7720,7 +7720,7 @@
 									"font": "Arial;13;1",
 									"left": 389,
 									"top": 61,
-									"width": 14.72998046875,
+									"width": 13.27001953125,
 									"height": 13,
 									"text": "uc"
 								}
@@ -13594,7 +13594,7 @@
 															"top": 47,
 															"width": 110,
 															"height": 13,
-															"text": "m: MainClass"
+															"text": "App"
 														},
 														{
 															"_type": "LabelView",
@@ -14935,7 +14935,7 @@
 														"$ref": "AAAAAAGIC8hye/C8EuI="
 													},
 													"edgePosition": 1,
-													"text": "10 : clickLoginButton"
+													"text": "10 : Login"
 												},
 												{
 													"_type": "EdgeLabelView",
@@ -15269,9 +15269,9 @@
 														"$ref": "AAAAAAGIC8lDfPDSX2A="
 													},
 													"font": "Arial;13;0",
-													"left": 388,
+													"left": 384,
 													"top": 448,
-													"width": 216.02978515625,
+													"width": 224.50390625,
 													"height": 13,
 													"alpha": 1.5707963267948966,
 													"distance": 10,
@@ -15279,7 +15279,7 @@
 														"$ref": "AAAAAAGIC8lDfPDTiew="
 													},
 													"edgePosition": 1,
-													"text": "11 : checkUser(username, password)"
+													"text": "11 : handleLogin(username, password)"
 												},
 												{
 													"_type": "EdgeLabelView",
@@ -16733,7 +16733,7 @@
 									"_parent": {
 										"$ref": "AAAAAAGIC7MUw9p5MM8="
 									},
-									"name": "clickLoginButton",
+									"name": "Login",
 									"source": {
 										"$ref": "AAAAAAGIC7tFCtrpe/A="
 									},
@@ -16747,7 +16747,7 @@
 									"_parent": {
 										"$ref": "AAAAAAGIC7MUw9p5MM8="
 									},
-									"name": "checkUser",
+									"name": "handleLogin",
 									"source": {
 										"$ref": "AAAAAAGIC8PECO+HNQA="
 									},
@@ -16892,7 +16892,7 @@
 									"_parent": {
 										"$ref": "AAAAAAGIC7MUw9p5MM8="
 									},
-									"name": "m",
+									"name": "App",
 									"represent": {
 										"$ref": "AAAAAAGIC8MtLe9E7uw="
 									},
@@ -17045,10 +17045,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGIC7MUw9p4CQo="
 							},
-							"name": "Role6",
-							"type": {
-								"$ref": "AAAAAAGIC73sWeK+QWo="
-							}
+							"name": "Role6"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -17067,7 +17064,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGIC7MUw9p4CQo="
 							},
-							"name": "Role8"
+							"name": "Role8",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -19305,9 +19303,9 @@
 														"$ref": "AAAAAAGIC98qrQ3A+r4="
 													},
 													"font": "Arial;13;0",
-													"left": 24.72998046875,
+													"left": 22.55908203125,
 													"top": 5,
-													"width": 200.443359375,
+													"width": 178.58203125,
 													"height": 13,
 													"text": "UpdateExerciseSequenceDiagram"
 												},
@@ -19320,7 +19318,7 @@
 													"font": "Arial;13;1",
 													"left": 5,
 													"top": 5,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -21419,9 +21417,9 @@
 														"$ref": "AAAAAAGIC+GmPBDdZ9Y="
 													},
 													"font": "Arial;13;0",
-													"left": 24.72998046875,
+													"left": 22.55908203125,
 													"top": 5,
-													"width": 196.1015625,
+													"width": 174.9638671875,
 													"height": 13,
 													"text": "DeleteExerciseSequenceDiagram"
 												},
@@ -21434,7 +21432,7 @@
 													"font": "Arial;13;1",
 													"left": 5,
 													"top": 5,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
