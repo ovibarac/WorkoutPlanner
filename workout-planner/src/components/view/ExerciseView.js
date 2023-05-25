@@ -1,5 +1,6 @@
 import NewExerciseView from "./NewExerciseView";
 import "../../styles/Exercise.css"
+import {useState} from "react";
 const ExerciseView = (props) =>{
     return(
         <div className="exerciseView">
@@ -25,18 +26,20 @@ const ExerciseView = (props) =>{
                     {props.exercises.length >0 && props.exercises.map((exercise) => (
                         <li key={exercise.name}
                             className="exerciseListItem">
+                            //TODO make separate component and have const [isOpenEditExercise, setIsOpenEditExercise] = useState(false); as state
                             <h1>{exercise.name}</h1>
                             <p>{exercise.description}</p>
                             <div id="editDeleteContainer">
                                 <button
                                     className="activeOnHover fa fa-pencil"
-                                    onClick={() => props.handleUpdateExercise(exercise)}
+                                    onClick={props.handleEditView}
                                 ></button>
                                 <button
                                     className="activeOnHover fa fa-trash-o"
                                     onClick={() => props.handleDeleteExercise(exercise)}
                                 ></button>
                             </div>
+
 
                         </li>
                     ))}

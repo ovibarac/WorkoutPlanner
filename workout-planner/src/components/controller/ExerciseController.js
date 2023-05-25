@@ -3,8 +3,11 @@ import {useEffect, useState} from "react";
 
 const ExerciseController = (props)=>{
     const [isOpenNewExercise, setIsOpenNewExercise] = useState(false);
+    const [isOpenEditExercise, setIsOpenEditExercise] = useState(false);
     const [newName, setNewName] = useState("");
     const [newDesc, setNewDesc] = useState("");
+    const [editName, setEditName] = useState("");
+    const [editDesc, setEditDesc] = useState("");
     const [exercises, setExercises] = useState([]);
 
 
@@ -17,12 +20,11 @@ const ExerciseController = (props)=>{
 
         initExercises();
     }, [props.service, props.user])
-    
 
-    
     const handleNewExercise = ()=>{
         setIsOpenNewExercise(!isOpenNewExercise);
     }
+
     const handleAddExercise = async () => {
         const id = await props.user.id;
         if(newName !== "" && newDesc !== ""){
@@ -32,10 +34,15 @@ const ExerciseController = (props)=>{
         }
     }
 
+    const handleEditView = () => {
+        setIsOpenEditExercise(!isOpenEditExercise);
+    }
+
     const handleUpdateExercise = async (exercise) => {
-        console.log("srv update ", exercise)
-        props.service.updateExercise(exercise, "nou", "bou");
+        console.log("ctrl update ", exercise)
+        await props.service.updateExercise(exercise, "nsy", "bou");
         const ex = await props.service.allExercises(exercise.userId);
+        console.log("new exercises ", ex)
         setExercises(ex);
     }
 
@@ -59,6 +66,12 @@ const ExerciseController = (props)=>{
             handleUpdateExercise={handleUpdateExercise}
             handleDeleteExercise={handleDeleteExercise}
             exercises={exercises}
+            editName={editName}
+            editDesc={editDesc}
+            handleChangeEditName={e => setEditName(e.target.value)}
+            handleChangeEditDesc={e => setEditDesc(e.target.value)}
+            handleEditView={handleEditView}
+            isOpenEditExercise={isOpenEditExercise}
         />
     )
 }

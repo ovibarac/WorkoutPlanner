@@ -59,7 +59,8 @@ ul{
 }
 
 #editDeleteContainer{
-
+    position: relative;
+    right: -130px;
 }
 
 .activeOnHover{
@@ -74,4 +75,20 @@ ul{
 }
 .exerciseListItem:hover .activeOnHover{
     visibility: visible;
+}
+
+#editExercise{
+    position: absolute;
+    z-index: 100;
+    font-size: 0.1rem;
+    background-color: #393646;
+    border-radius: 15px;
+}
+
+#innerEditExercise{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.1rem;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 15px;
 }

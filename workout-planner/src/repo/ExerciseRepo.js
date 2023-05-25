@@ -19,7 +19,7 @@ class ExerciseRepo{
         return await fetch(`${baseUrl}workout-planner/exercises/${userId}`, req)
             .then((response) => response.json())
             .then((responseJson) => {
-                console.log(responseJson);
+                console.log("repo findall response ", responseJson);
                 return responseJson;
             })
             .catch((error) => {

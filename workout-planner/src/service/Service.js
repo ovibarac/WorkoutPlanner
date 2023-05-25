@@ -36,6 +36,7 @@ class Service{
     }
 
     async updateExercise(exercise, newName, newDescription){
+        console.log("service update ", newName, " ", newDescription)
         await this.exerciseRepo.update(exercise, newName, newDescription)
     }
 
