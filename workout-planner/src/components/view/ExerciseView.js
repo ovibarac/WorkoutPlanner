@@ -1,6 +1,7 @@
 import NewExerciseView from "./NewExerciseView";
 import "../../styles/Exercise.css"
 import {useState} from "react";
+import ExerciseListItem from "./ExerciseListItem";
 const ExerciseView = (props) =>{
     //TODO make separate component and have const [isOpenEditExercise, setIsOpenEditExercise] = useState(false); as state
     return(
@@ -25,22 +26,16 @@ const ExerciseView = (props) =>{
             <div id="exerciseList">
                 <ul>
                     {props.exercises.length >0 && props.exercises.map((exercise) => (
-                        <li key={exercise.name}
-                            className="exerciseListItem">
-
-                            <h1>{exercise.name}</h1>
-                            <p>{exercise.description}</p>
-                            <div id="editDeleteContainer">
-                                <button
-                                    className="activeOnHover fa fa-pencil"
-                                    onClick={props.handleEditView}
-                                ></button>
-                                <button
-                                    className="activeOnHover fa fa-trash-o"
-                                    onClick={() => props.handleDeleteExercise(exercise)}
-                                ></button>
-                            </div>
-                        </li>
+                        <ExerciseListItem
+                            exercise={exercise}
+                            handleEditView={props.handleEditView}
+                            handleDeleteExercise={props.handleDeleteExercise}
+                            editName={props.editName}
+                            editDesc={props.editDesc}
+                            handleChangeEditName={props.handleChangeEditName}
+                            handleChangeEditDesc={props.handleChangeEditDesc}
+                            isOpenEditExercise={props.isOpenEditExercise}
+                        />
                     ))}
                 </ul>
             </div>
