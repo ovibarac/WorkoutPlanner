@@ -1,25 +1,25 @@
-const NewExerciseView = (props)=>{
+const NewWorkoutView = (props)=>{
     return(
         <div>
             <input
-                id="newExerciseNameInput"
+                id="newWorkoutNameInput"
                 placeholder="name"
                 value={props.newName}
                 onChange={props.handleChangeAddName}
             />
             <input
-                id="newExerciseDescInput"
+                id="newWorkoutDescInput"
                 placeholder="description"
                 value={props.newDesc}
                 onChange={props.handleChangeAddDesc}
             />
             <button
-                id="addExerciseButton"
-                onClick={props.handleAddExercise}>
+                id="addWorkoutButton"
+                onClick={props.handleAddWorkout}>
                 Add
             </button>
         </div>
     )
 }
 
-export default NewExerciseView;
+export default NewWorkoutView;

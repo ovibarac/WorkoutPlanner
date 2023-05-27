@@ -5,8 +5,7 @@ const UserController = (props) => {
 
     return(
         <>
-            <UserView/>
-            <ExerciseController
+            <UserView
                 service={props.service}
                 user={props.user}
             />

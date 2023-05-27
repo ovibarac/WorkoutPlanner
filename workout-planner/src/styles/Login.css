@@ -5,3 +5,15 @@
 .buttons{
     flex-direction: row;
 }
+
+#trainerDiv{
+    margin: -15px;
+}
+
+#trainerCheck{
+
+}
+
+#trainerLabel{
+    font-size: 0.8rem;
+}

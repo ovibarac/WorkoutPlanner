@@ -28,7 +28,7 @@ class UserRepo{
         return user;
     }
 
-    async add(username, password) {
+    async add(username, password, type) {
         let req = {
             method: "POST",
             headers: {
@@ -38,7 +38,7 @@ class UserRepo{
             body: JSON.stringify({
                 username: username,
                 password: password,
-                type: UserTypes.USER,
+                type: type,
             }),
         };
         await fetch(`${baseUrl}workout-planner/user/`, req)

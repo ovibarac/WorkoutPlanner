@@ -1,4 +1,4 @@
-.exerciseView{
+.workoutView{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -13,7 +13,7 @@
     margin-left: 50px;
 }
 
-#newExerciseBtn{
+#newWorkoutBtn{
     margin-bottom: -3px;
     color: white;
     font-size: 2rem;
@@ -22,7 +22,7 @@
     box-shadow: none;
 }
 
-#newExerciseBtn:active{
+#newWorkoutBtn:active{
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
@@ -35,7 +35,7 @@ ul{
     flex-wrap: wrap;
 }
 
-.exerciseListItem{
+.workoutListItem{
     margin: 10px;
     border-radius: 15px;
     list-style: none;
@@ -49,15 +49,15 @@ ul{
     word-break: break-word;
 }
 
-.exerciseListItem::-webkit-scrollbar {
+.workoutListItem::-webkit-scrollbar {
     display: none;
 }
 
-.exerciseListItem h1{
+.workoutListItem h1{
     font-size: 2rem;
 
 }
-.exerciseListItem p{
+.workoutListItem p{
     font-size: 1rem;
     margin-bottom: 10px;
 }
@@ -77,11 +77,11 @@ ul{
 .activeOnHover:active{
     background-color: rgba(255,255,255, 0.1);
 }
-.exerciseListItem:hover .activeOnHover{
+.workoutListItem:hover .activeOnHover{
     visibility: visible;
 }
 
-#editExercise{
+#editWorkout{
     position: absolute;
     z-index: 100;
     font-size: 0.1rem;
@@ -91,7 +91,7 @@ ul{
     box-shadow: 1.5px 1.5px rgba(0,0,0, 0.1);
 }
 
-#innerEditExercise{
+#innerEditWorkout{
     display: flex;
     flex-direction: column;
     font-size: 0.1rem;

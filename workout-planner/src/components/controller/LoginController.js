@@ -8,6 +8,7 @@ function LoginController({service}){
     const [password, setPassword] = useState("");
     const [loggedUser, setLoggedUser] = useState(null);
     const [loggedIn, setLoggedIn] = useState(false);
+    const [trainer, setTrainer] = useState(false);
 
     const handleLogin = async () => {
         const user = await service.findUser(username, password);
@@ -18,7 +19,7 @@ function LoginController({service}){
     }
 
     const handleSignUp = async () => {
-        const user = await service.addUser(username, password);
+        const user = await service.addUser(username, password, trainer);
         if(user != null){
             setLoggedUser(user);
             setLoggedIn(true);
@@ -35,6 +36,7 @@ function LoginController({service}){
                     onChangePassword={e => setPassword(e.target.value)}
                     onLogin={handleLogin}
                     onSignUp={handleSignUp}
+                    onChangeTrainer={e => setTrainer(e.target.checked)}
                 />
             }
             {loggedIn &&

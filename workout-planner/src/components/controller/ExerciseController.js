@@ -14,8 +14,12 @@ const ExerciseController = (props)=>{
 
     useEffect( () => {
         const initExercises = async()=>{
-            if (props.user)
-                setExercises(await props.service.allExercises(props.user.id));
+            if (props.user){
+                const exercises = await props.service.allExercises(props.user.id)
+                if(exercises !== null && exercises.length!==0){
+                    setExercises(exercises);
+                }
+            }
         }
 
         initExercises();
@@ -31,6 +35,8 @@ const ExerciseController = (props)=>{
             await props.service.addExercise(newName, newDesc, id);
             const ex = await props.service.allExercises(id);
             setExercises(ex);
+            setNewName("");
+            setNewDesc("");
         }
     }
 
@@ -40,15 +46,17 @@ const ExerciseController = (props)=>{
 
     const handleUpdateExercise = async (exercise) => {
         console.log("ctrl update ", exercise)
-        await props.service.updateExercise(exercise, "nsy", "bou");
+        await props.service.updateExercise(exercise, editName, editDesc);
         const ex = await props.service.allExercises(exercise.userId);
         console.log("new exercises ", ex)
         setExercises(ex);
+        setEditName("");
+        setEditDesc("");
     }
 
     const handleDeleteExercise = async (exercise) => {
         console.log("srv delete")
-        props.service.deleteExercise(exercise);
+        await props.service.deleteExercise(exercise);
         const ex = await props.service.allExercises(exercise.userId);
         setExercises(ex);
     }

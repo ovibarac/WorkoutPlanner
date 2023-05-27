@@ -82,40 +82,40 @@
       <Deterministic>1</Deterministic>
       <Variadic>1</Variadic>
     </routine>
-    <routine id="32" parent="1" name="lag">
+    <routine id="32" parent="1" name="max">
+      <Deterministic>1</Deterministic>
+      <Variadic>1</Variadic>
+    </routine>
+    <routine id="33" parent="1" name="min">
+      <Deterministic>1</Deterministic>
+      <Variadic>1</Variadic>
+    </routine>
+    <routine id="34" parent="1" name="json_set">
+      <Deterministic>1</Deterministic>
+      <Variadic>1</Variadic>
+    </routine>
+    <routine id="35" parent="1" name="regexp">
+      <Variadic>1</Variadic>
+    </routine>
+    <routine id="36" parent="1" name="snippet">
+      <Variadic>1</Variadic>
+    </routine>
+    <routine id="37" parent="1" name="rtreecheck">
+      <Variadic>1</Variadic>
+    </routine>
+    <routine id="38" parent="1" name="highlight">
+      <Variadic>1</Variadic>
+    </routine>
+    <routine id="39" parent="1" name="bm25">
+      <Variadic>1</Variadic>
+    </routine>
+    <routine id="40" parent="1" name="lag">
       <FunctionType>window</FunctionType>
     </routine>
-    <routine id="33" parent="1" name="max">
-      <Deterministic>1</Deterministic>
-      <Variadic>1</Variadic>
-    </routine>
-    <routine id="34" parent="1" name="min">
-      <Deterministic>1</Deterministic>
-      <Variadic>1</Variadic>
-    </routine>
-    <routine id="35" parent="1" name="lead">
+    <routine id="41" parent="1" name="lead">
       <FunctionType>window</FunctionType>
     </routine>
-    <routine id="36" parent="1" name="json_set">
-      <Deterministic>1</Deterministic>
-      <Variadic>1</Variadic>
-    </routine>
-    <routine id="37" parent="1" name="regexp">
-      <Variadic>1</Variadic>
-    </routine>
-    <routine id="38" parent="1" name="snippet">
-      <Variadic>1</Variadic>
-    </routine>
-    <routine id="39" parent="1" name="matchinfo"/>
-    <routine id="40" parent="1" name="rtreecheck">
-      <Variadic>1</Variadic>
-    </routine>
-    <routine id="41" parent="1" name="highlight">
-      <Variadic>1</Variadic>
-    </routine>
-    <routine id="42" parent="1" name="bm25">
-      <Variadic>1</Variadic>
-    </routine>
+    <routine id="42" parent="1" name="matchinfo"/>
     <routine id="43" parent="1" name="charindex"/>
     <routine id="44" parent="1" name="fts3_tokenizer"/>
     <routine id="45" parent="1" name="pow">
@@ -484,59 +484,59 @@
     <argument id="190" parent="32">
       <ArgumentDirection>R</ArgumentDirection>
     </argument>
-    <argument id="191" parent="32">
+    <argument id="191" parent="33">
+      <ArgumentDirection>R</ArgumentDirection>
+    </argument>
+    <argument id="192" parent="34">
+      <ArgumentDirection>R</ArgumentDirection>
+    </argument>
+    <argument id="193" parent="35">
+      <ArgumentDirection>R</ArgumentDirection>
+    </argument>
+    <argument id="194" parent="36">
+      <ArgumentDirection>R</ArgumentDirection>
+    </argument>
+    <argument id="195" parent="37">
+      <ArgumentDirection>R</ArgumentDirection>
+    </argument>
+    <argument id="196" parent="38">
+      <ArgumentDirection>R</ArgumentDirection>
+    </argument>
+    <argument id="197" parent="39">
+      <ArgumentDirection>R</ArgumentDirection>
+    </argument>
+    <argument id="198" parent="40">
+      <ArgumentDirection>R</ArgumentDirection>
+    </argument>
+    <argument id="199" parent="40">
       <Position>1</Position>
     </argument>
-    <argument id="192" parent="32">
+    <argument id="200" parent="40">
       <Position>2</Position>
     </argument>
-    <argument id="193" parent="32">
+    <argument id="201" parent="40">
       <Position>3</Position>
     </argument>
-    <argument id="194" parent="33">
+    <argument id="202" parent="41">
       <ArgumentDirection>R</ArgumentDirection>
     </argument>
-    <argument id="195" parent="34">
-      <ArgumentDirection>R</ArgumentDirection>
-    </argument>
-    <argument id="196" parent="35">
-      <ArgumentDirection>R</ArgumentDirection>
-    </argument>
-    <argument id="197" parent="35">
+    <argument id="203" parent="41">
       <Position>1</Position>
     </argument>
-    <argument id="198" parent="35">
+    <argument id="204" parent="41">
       <Position>2</Position>
     </argument>
-    <argument id="199" parent="35">
+    <argument id="205" parent="41">
       <Position>3</Position>
     </argument>
-    <argument id="200" parent="36">
+    <argument id="206" parent="42">
       <ArgumentDirection>R</ArgumentDirection>
     </argument>
-    <argument id="201" parent="37">
-      <ArgumentDirection>R</ArgumentDirection>
-    </argument>
-    <argument id="202" parent="38">
-      <ArgumentDirection>R</ArgumentDirection>
-    </argument>
-    <argument id="203" parent="39">
-      <ArgumentDirection>R</ArgumentDirection>
-    </argument>
-    <argument id="204" parent="39">
+    <argument id="207" parent="42">
       <Position>1</Position>
-    </argument>
-    <argument id="205" parent="39">
-      <Position>2</Position>
-    </argument>
-    <argument id="206" parent="40">
-      <ArgumentDirection>R</ArgumentDirection>
-    </argument>
-    <argument id="207" parent="41">
-      <ArgumentDirection>R</ArgumentDirection>
     </argument>
     <argument id="208" parent="42">
-      <ArgumentDirection>R</ArgumentDirection>
+      <Position>2</Position>
     </argument>
     <argument id="209" parent="43">
       <ArgumentDirection>R</ArgumentDirection>
@@ -1425,98 +1425,130 @@
     </argument>
     <table id="504" parent="173" name="Exercises"/>
     <table id="505" parent="173" name="Users"/>
-    <table id="506" parent="173" name="sqlite_master">
+    <table id="506" parent="173" name="Workouts"/>
+    <table id="507" parent="173" name="sqlite_master">
       <System>1</System>
     </table>
-    <table id="507" parent="173" name="sqlite_sequence">
+    <table id="508" parent="173" name="sqlite_sequence">
       <System>1</System>
     </table>
-    <column id="508" parent="504" name="id">
+    <column id="509" parent="504" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DataType>INTEGER|0s</DataType>
       <Position>1</Position>
     </column>
-    <column id="509" parent="504" name="name">
+    <column id="510" parent="504" name="name">
       <DataType>VARCHAR(255)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="510" parent="504" name="description">
+    <column id="511" parent="504" name="description">
       <DataType>VARCHAR(255)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="511" parent="504" name="userId">
+    <column id="512" parent="504" name="userId">
       <DataType>INTEGER|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="512" parent="504" name="createdAt">
+    <column id="513" parent="504" name="createdAt">
       <DataType>DATETIME|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="513" parent="504" name="updatedAt">
+    <column id="514" parent="504" name="updatedAt">
       <DataType>DATETIME|0s</DataType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <key id="514" parent="504">
+    <key id="515" parent="504">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="515" parent="505" name="id">
+    <column id="516" parent="505" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DataType>INTEGER|0s</DataType>
       <Position>1</Position>
     </column>
-    <column id="516" parent="505" name="username">
+    <column id="517" parent="505" name="username">
       <DataType>VARCHAR(255)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="517" parent="505" name="password">
+    <column id="518" parent="505" name="password">
       <DataType>VARCHAR(255)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="518" parent="505" name="type">
+    <column id="519" parent="505" name="type">
       <DataType>VARCHAR(255)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="519" parent="505" name="createdAt">
+    <column id="520" parent="505" name="createdAt">
       <DataType>DATETIME|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="520" parent="505" name="updatedAt">
+    <column id="521" parent="505" name="updatedAt">
       <DataType>DATETIME|0s</DataType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <key id="521" parent="505">
+    <key id="522" parent="505">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="522" parent="506" name="type">
+    <column id="523" parent="506" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DataType>INTEGER|0s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="524" parent="506" name="name">
+      <DataType>VARCHAR(255)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="525" parent="506" name="description">
+      <DataType>VARCHAR(255)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="526" parent="506" name="userId">
+      <DataType>INTEGER|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="527" parent="506" name="createdAt">
+      <DataType>DATETIME|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="528" parent="506" name="updatedAt">
+      <DataType>DATETIME|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <key id="529" parent="506">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="530" parent="507" name="type">
       <DataType>TEXT|0s</DataType>
       <Position>1</Position>
     </column>
-    <column id="523" parent="506" name="name">
+    <column id="531" parent="507" name="name">
       <DataType>TEXT|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="524" parent="506" name="tbl_name">
+    <column id="532" parent="507" name="tbl_name">
       <DataType>TEXT|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="525" parent="506" name="rootpage">
+    <column id="533" parent="507" name="rootpage">
       <DataType>INT|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="526" parent="506" name="sql">
+    <column id="534" parent="507" name="sql">
       <DataType>TEXT|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="527" parent="507" name="name">
+    <column id="535" parent="508" name="name">
       <Position>1</Position>
     </column>
-    <column id="528" parent="507" name="seq">
+    <column id="536" parent="508" name="seq">
       <Position>2</Position>
     </column>
   </database-model>

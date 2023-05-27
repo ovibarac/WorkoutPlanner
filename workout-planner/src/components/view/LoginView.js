@@ -23,7 +23,17 @@ const LoginView = (props) =>{
             <div className="buttons">
                 <button id="login" onClick={props.onLogin} className="loginUi">Log in</button>
                 <button id="signup" onClick={props.onSignUp} className="loginUi">Sign up</button>
+
             </div>
+            <div id="trainerDiv">
+                <input
+                    id="trainerCheck"
+                    type="checkbox"
+                    onChange={props.onChangeTrainer}
+                />
+                <label id="trainerLabel" htmlFor="trainerCheck">Trainer</label>
+            </div>
+
 
         </>
     )

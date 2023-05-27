@@ -1,29 +1,29 @@
 import {useState} from "react";
 
-const ExerciseListItem = (props) => {
-    const [isOpenEditExercise, setIsOpenEditExercise] = useState(false);
+const WorkoutListItem = (props) => {
+    const [isOpenEditWorkout, setIsOpenEditWorkout] = useState(false);
 
     return(
         <div id="wrapperListItem">
-            <li key={props.exercise.id}
-                className="exerciseListItem">
+            <li key={props.workout.id}
+                className="workoutListItem">
 
-                <h1>{props.exercise.name}</h1>
-                <p>{props.exercise.description}</p>
+                <h1>{props.workout.name}</h1>
+                <p>{props.workout.description}</p>
                 <div id="editDeleteContainer">
                     <button
                         className="activeOnHover fa fa-pencil"
-                        onClick={() => {setIsOpenEditExercise(!isOpenEditExercise)}}
+                        onClick={() => {setIsOpenEditWorkout(!isOpenEditWorkout)}}
                     ></button>
                     <button
                         className="activeOnHover fa fa-trash-o"
-                        onClick={() => props.handleDeleteExercise(props.exercise)}
+                        onClick={() => props.handleDeleteWorkout(props.workout)}
                     ></button>
                 </div>
             </li>
-            {isOpenEditExercise &&
-                <div id="editExercise">
-                    <div id="innerEditExercise">
+            {isOpenEditWorkout &&
+                <div id="editWorkout">
+                    <div id="innerEditWorkout">
                         <input
                             placeholder="new name"
                             value={props.editName}
@@ -35,7 +35,7 @@ const ExerciseListItem = (props) => {
                             onChange={props.handleChangeEditDesc}
                         />
                         <button
-                            onClick={() => props.handleUpdateExercise(props.exercise)}
+                            onClick={() => props.handleUpdateWorkout(props.workout)}
                         >
                             Edit
                         </button>
@@ -47,4 +47,4 @@ const ExerciseListItem = (props) => {
     )
 }
 
-export default ExerciseListItem;
+export default WorkoutListItem;
