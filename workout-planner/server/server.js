@@ -58,7 +58,6 @@ const Exercise = sequelize.define('Exercise', {
 })
 
 
-
 const Workout = sequelize.define('Workout', {
     id: {
         type: DataTypes.INTEGER,

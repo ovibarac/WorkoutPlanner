@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="workoutdb.sqlite">
-  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.43">
+  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.45">
     <root id="1">
       <ServerVersion>3.40.1</ServerVersion>
     </root>
@@ -1432,19 +1432,19 @@
     </table>
     <column id="507" parent="504" name="id">
       <AutoIncrement>1</AutoIncrement>
-      <DataType>INTEGER|0s</DataType>
+      <DasType>INTEGER|0s</DasType>
       <Position>1</Position>
     </column>
     <column id="508" parent="504" name="username">
-      <DataType>character varying|0s</DataType>
+      <DasType>character varying|0s</DasType>
       <Position>2</Position>
     </column>
     <column id="509" parent="504" name="password">
-      <DataType>character varying|0s</DataType>
+      <DasType>character varying|0s</DasType>
       <Position>3</Position>
     </column>
     <column id="510" parent="504" name="type">
-      <DataType>character varying|0s</DataType>
+      <DasType>character varying|0s</DasType>
       <Position>4</Position>
     </column>
     <key id="511" parent="504" name="Users_pk">
@@ -1452,23 +1452,23 @@
       <Primary>1</Primary>
     </key>
     <column id="512" parent="505" name="type">
-      <DataType>TEXT|0s</DataType>
+      <DasType>TEXT|0s</DasType>
       <Position>1</Position>
     </column>
     <column id="513" parent="505" name="name">
-      <DataType>TEXT|0s</DataType>
+      <DasType>TEXT|0s</DasType>
       <Position>2</Position>
     </column>
     <column id="514" parent="505" name="tbl_name">
-      <DataType>TEXT|0s</DataType>
+      <DasType>TEXT|0s</DasType>
       <Position>3</Position>
     </column>
     <column id="515" parent="505" name="rootpage">
-      <DataType>INT|0s</DataType>
+      <DasType>INT|0s</DasType>
       <Position>4</Position>
     </column>
     <column id="516" parent="505" name="sql">
-      <DataType>TEXT|0s</DataType>
+      <DasType>TEXT|0s</DasType>
       <Position>5</Position>
     </column>
     <column id="517" parent="506" name="name">
